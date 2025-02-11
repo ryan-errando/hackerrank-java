@@ -1,7 +1,6 @@
 package com.practices.sorting;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Comparator {
@@ -31,11 +30,11 @@ public class Comparator {
             players.add(new Player(sc.next(), sc.nextInt()));
         }
 
-        Collections.sort(players, (p1, p2) ->
+        players.sort((p1, p2) ->
         {
-            if(p1.score != p2.score){
+            if (p1.score != p2.score) {
                 return p2.score - p1.score;
-            }else{
+            } else {
                 return p1.name.compareTo(p2.name);
             }
         });
